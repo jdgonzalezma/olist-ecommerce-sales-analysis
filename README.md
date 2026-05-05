@@ -74,4 +74,3 @@ psql -U your_user -d olist -f sql/05_constraints.sql
 psql -U your_user -d olist -f sql/06_data_cleaning.sql
 ```
 
-¿Seguimos con **Data Quality Notes**?
