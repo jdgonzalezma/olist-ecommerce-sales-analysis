@@ -28,3 +28,21 @@ payments, deliveries, and customer reviews.
 | olist_products_dataset.csv | Product attributes and dimensions |
 | olist_geolocation_dataset.csv | ZIP code coordinates |
 | product_category_name_translation.csv | Category names in English |
+
+## Project Structure
+
+```
+ecommerce-sales-analysis/
+├── sql/
+│   ├── 01_schema.sql            # Create fact and dimension tables
+│   ├── 02_load_data.sql         # Load CSV files into temporary tables
+│   ├── 03_insert_data.sql       # Cast data types and populate final tables
+│   ├── 04_data_quality.sql      # Fix data quality issues from source dataset
+│   ├── 05_constraints.sql       # Add primary keys and foreign keys
+│   └── 06_data_cleaning.sql     # Clean dim_geolocation duplicates
+├── notebooks/
+│   └── 01_eda.ipynb             # Exploratory data analysis (coming soon)
+├── dashboard/
+│   └── olist_dashboard.pbix     # Power BI dashboard (coming soon)
+└── README.md
+```
