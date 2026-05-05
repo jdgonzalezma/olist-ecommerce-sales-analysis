@@ -98,3 +98,36 @@ The source dataset contains a typo in two column names: `product_name_lenght`
 and `product_description_lenght`. These were corrected to `product_name_length` 
 and `product_description_length` in the final table while preserving the 
 original column names in the temporary loading tables.
+
+## Analysis Questions
+
+### Sales Performance
+- What is the total revenue and number of orders per month?
+- Which product categories generate the most revenue?
+- What is the average order value by state?
+
+### Customer Behavior
+- What are the most common payment methods?
+- What percentage of customers make more than one purchase?
+- What is the average review score by product category?
+
+### Delivery Efficiency
+- What is the average delivery time by state?
+- What percentage of orders are delivered before the estimated date?
+- Is there a correlation between delivery time and review score?
+
+### Seller Activity
+- Which sellers generate the most revenue?
+- What is the average number of orders per seller by state?
+
+## Tools
+
+| Tool | Purpose |
+|---|---|
+| PostgreSQL 14 | Database engine and SQL analysis |
+| psql | Command-line client for database setup and data loading |
+| Python 3 | Exploratory data analysis and data manipulation |
+| pandas | Data transformation and aggregation |
+| matplotlib / seaborn | Data visualization |
+| Power BI | Interactive dashboard |
+| Git / GitHub | Version control and project hosting |
