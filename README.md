@@ -46,3 +46,30 @@ ecommerce-sales-analysis/
 │   └── olist_dashboard.pbix     # Power BI dashboard (coming soon)
 └── README.md
 ```
+## How to Run
+
+### Requirements
+- PostgreSQL 14+
+- psql command-line client
+- Dataset downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and extracted to a local folder
+
+### Steps
+
+**1. Create a new database in PostgreSQL**
+```sql
+CREATE DATABASE olist;
+```
+
+**2. Run the SQL files in order from the psql terminal**
+```bash
+psql -U your_user -d olist -f sql/01_schema.sql
+psql -U your_user -d olist -f sql/02_load_data.sql
+psql -U your_user -d olist -f sql/03_insert_data.sql
+psql -U your_user -d olist -f sql/04_data_quality.sql
+psql -U your_user -d olist -f sql/05_constraints.sql
+psql -U your_user -d olist -f sql/06_data_cleaning.sql
+```
+
+**3. Update file paths in `02_load_data.sql`**  
+Before running step 2, replace `your\local\path\` with the absolute 
+path to the folder where your CSV files are located.
