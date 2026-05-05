@@ -73,4 +73,28 @@ psql -U your_user -d olist -f sql/04_data_quality.sql
 psql -U your_user -d olist -f sql/05_constraints.sql
 psql -U your_user -d olist -f sql/06_data_cleaning.sql
 ```
+## Data Quality Notes
 
+### Duplicate review_id in fact_order_reviews
+The source dataset contains duplicate `review_id` values associated with 
+different `order_id` values. This appears to be a known issue in the Olist 
+dataset. A composite primary key `(review_id, order_id)` was used instead 
+of `review_id` alone to preserve all records while ensuring row uniqueness.
+
+### Missing categories in dim_product_category_name_translation
+Two product categories present in `dim_products` had no corresponding 
+translation in the source dataset: `pc_gamer` and 
+`portateis_cozinha_e_preparadores_de_alimentos`. Both were manually inserted 
+into the translation table to maintain referential integrity.
+
+### Duplicate coordinates in dim_geolocation
+The geolocation table contains multiple coordinate entries per ZIP code prefix, 
+making it impossible to define a primary key on `geolocation_zip_code_prefix`. 
+The table was cleaned by averaging latitude and longitude values per ZIP code, 
+resulting in one row per ZIP code with a valid primary key.
+
+### Typo in dim_products source dataset
+The source dataset contains a typo in two column names: `product_name_lenght` 
+and `product_description_lenght`. These were corrected to `product_name_length` 
+and `product_description_length` in the final table while preserving the 
+original column names in the temporary loading tables.
