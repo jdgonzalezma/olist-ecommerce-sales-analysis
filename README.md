@@ -60,7 +60,11 @@ ecommerce-sales-analysis/
 CREATE DATABASE olist;
 ```
 
-**2. Run the SQL files in order from the psql terminal**
+**2. Update file paths in `02_load_data.sql`**  
+Replace `your\local\path\` with the absolute path to the folder 
+where your CSV files are located.
+
+**3. Run the SQL files in order from the psql terminal**
 ```bash
 psql -U your_user -d olist -f sql/01_schema.sql
 psql -U your_user -d olist -f sql/02_load_data.sql
@@ -70,6 +74,4 @@ psql -U your_user -d olist -f sql/05_constraints.sql
 psql -U your_user -d olist -f sql/06_data_cleaning.sql
 ```
 
-**3. Update file paths in `02_load_data.sql`**  
-Before running step 2, replace `your\local\path\` with the absolute 
-path to the folder where your CSV files are located.
+¿Seguimos con **Data Quality Notes**?
