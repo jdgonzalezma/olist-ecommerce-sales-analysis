@@ -45,9 +45,9 @@ ecommerce-sales-analysis/
 │   ├── 05_constraints.sql       # Add primary keys and foreign keys
 │   └── 06_data_cleaning.sql     # Clean dim_geolocation duplicates
 ├── notebooks/
-│   └── 01_eda.ipynb             # Exploratory data analysis (coming soon)
+│   └── 01_eda.ipynb             # Exploratory data analysis
 ├── dashboard/
-│   └── olist_dashboard.pbix     # Power BI dashboard (coming soon)
+│   └── olist_dashboard.pbix     # Power BI dashboard
 └── README.md
 ```
 ## How to Run
