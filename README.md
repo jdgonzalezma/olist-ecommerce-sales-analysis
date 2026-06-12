@@ -8,6 +8,10 @@ data quality handling, and business analysis using SQL and Python.
 The goal is to extract actionable insights on sales performance, customer 
 behavior, delivery efficiency, and seller activity across Brazilian states.
 
+## Dashboard Preview
+
+![Executive Summary](dashboard/dashboard_preview.png)
+
 ## Dataset
 
 Source: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)  
